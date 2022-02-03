@@ -1,0 +1,25 @@
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.footer-adreess {
+  width: 231px;
+}
+.footer-social {
+  width: 206px;
+}
+.footer-section {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.logo-footer {
+  margin-bottom: 20px;
+  color: var(--third-color);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  display: inline-block;
+}
