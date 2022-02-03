@@ -201,8 +201,7 @@ body {
 .form-main-btn:hover,
 .form-main-btn:focus,
 .subcribe-btn:focus,
-.subcribe-btn:hover
-{
+.subcribe-btn:hover {
   background-color: #188be9;
 }
 
@@ -624,6 +623,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border: none;
 }
 
 .subscribe-btn-icon {
@@ -698,7 +698,7 @@ body {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1, 15;
+  line-height: 1.15;
   text-align: center;
   color: var(--secondary-text-color);
   margin-bottom: 12px;
@@ -739,8 +739,8 @@ body {
   margin-bottom: 10px;
 }
 .input-text {
-  font-size: 14px;
-  line-height: 1, 14;
+  font-size: 12px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   margin-bottom: 4px;
   color: #757575;
@@ -759,7 +759,7 @@ body {
 
 .check-text {
   font-size: 14px;
-  line-height: 1, 7;
+  line-height: 1.7;
   color: #757575;
   display: flex;
   text-align: center;
@@ -776,6 +776,9 @@ body {
 .checkbox-field {
   margin-bottom: 30px;
   margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .policy-check:checked + .check-text::before {
   border: none;
