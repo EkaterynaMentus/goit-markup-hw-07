@@ -15,9 +15,7 @@
 }
 .we-do-title {
   color: var(--secondary-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  @include font(36px, 700, 1.17, null);
   text-align: center;
   margin-bottom: 50px;
 }

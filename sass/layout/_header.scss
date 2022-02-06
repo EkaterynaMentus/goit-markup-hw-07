@@ -5,9 +5,7 @@
 .logo {
   color: #000000;
   font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  @include font(26px, 700, 1.19, null);
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -15,17 +13,13 @@
 .logo-color {
   color: var(--accent-color);
 }
-.header-list {
-  display: flex;
-  align-items: center;
-}
-.header-container {
-  display: flex;
-  align-items: center;
+.header-list,
+.header-container,
+.header-connect {
+  @extend %flex-items;
 }
 .header-connect {
-  display: flex;
-  align-items: center;
+  @extend %flex-items;
   margin-left: auto;
 }
 .connect-item:not(:last-child) {
@@ -33,9 +27,7 @@
 }
 .header-link {
   color: var(--secondary-text-color);
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(null, 500, 1.14, 0.02em);
   padding-top: 32px;
   padding-bottom: 31px;
   display: block;
@@ -44,15 +36,17 @@
 .header-link {
   position: relative;
 }
-.header-link.current:after {
-  content: '';
-  width: 100%;
-  border-radius: 2px;
-  height: 4px;
-  background-color: var(--accent-color);
-  position: absolute;
-  left: 0;
-  bottom: -1px;
+.header-link.current {
+  &:after {
+    content: '';
+    width: 100%;
+    border-radius: 2px;
+    height: 4px;
+    background-color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+  }
 }
 .header-list-item:not(:last-child) {
   margin-right: 50px;
@@ -68,27 +62,26 @@
 }
 .nav-link {
   color: var(--primary-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
+  @include font(14px, 500, 1.14, 0.02em);
+  @extend %flex-items;
   padding-top: 32px;
   padding-bottom: 31px;
   transition: color 250ms var(--cubic);
 }
-.header-link:focus,
-.header-link:hover,
-.nav-link:hover,
-.nav-link:focus,
-.contact-link:focus,
-.contact-link:hover,
-.address-link:hover,
-.address-link:focus,
-.our-clients-link:hover,
-.our-clients-link:focus {
-  color: var(--accent-color);
+.header-link,
+.header-link,
+.nav-link,
+.nav-link,
+.contact-link,
+.contact-link,
+.address-link,
+.address-link,
+.our-clients-link,
+.our-clients-link {
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .current {
   color: var(--accent-color);

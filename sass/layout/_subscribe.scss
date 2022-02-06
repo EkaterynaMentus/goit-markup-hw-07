@@ -9,8 +9,7 @@
   text-transform: uppercase;
 }
 .subscribe-form {
-  display: flex;
-  align-items: center;
+  @extend %flex-items;
 }
 .subscribe-input {
   width: 358px;
@@ -24,16 +23,14 @@
   font-size: 16px;
   outline: none;
   transition: border-color 250ms var(--cubic);
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    @include font(16px, null, 1.25, null);
+  }
 }
-.subscribe-input:focus {
-  border-color: var(--accent-color);
-}
-.subscribe-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
-  line-height: 1.25;
-}
-
 .subcribe-btn {
   background-color: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -42,10 +39,7 @@
   min-height: 50px;
   color: var(--third-color);
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
+  @include font(16px, 700, 1.87, 0.06em);
   cursor: pointer;
   display: inline-flex;
   align-items: center;

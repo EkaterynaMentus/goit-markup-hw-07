@@ -9,17 +9,13 @@
   margin-top: -30px;
 }
 .about-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(14px, 700, 1.14, 0.03em);
   text-transform: uppercase;
   color: var(--secondary-text-color);
   margin-bottom: 10px;
 }
 .about-after-title {
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(14px, null, 1.71, null);
   max-width: 270px;
 }
 .about-us-list-item {
@@ -31,8 +27,7 @@
   height: 120px;
   border-radius: 4px;
   background-color: #f5f4fa;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  @extend %flex-items;
   margin-bottom: 30px;
 }

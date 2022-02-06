@@ -14,12 +14,9 @@
   margin: 0 auto;
 }
 .hero-title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  @include font(44px, 900, 1.36, 0.06em);
   color: var(--third-color);
   text-align: center;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
   max-width: 696px;
@@ -30,23 +27,23 @@
   background-color: var(--accent-color);
   color: var(--third-color);
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
+  @include font(16px, 700, 1.87, 0.06em);
   border: none;
   cursor: pointer;
-  letter-spacing: 0.06em;
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 10px 32px;
   transition: background-color 250ms var(--cubic);
 }
-.hero-btn:hover,
-.hero-btn:focus,
-.form-main-btn:hover,
-.form-main-btn:focus,
-.subcribe-btn:focus,
-.subcribe-btn:hover {
-  background-color: #188be9;
+.hero-btn,
+.hero-btn,
+.form-main-btn,
+.form-main-btn,
+.subcribe-btn,
+.subcribe-btn {
+  &:focus,
+  &:hover {
+    background-color: #188be9;
+  }
 }

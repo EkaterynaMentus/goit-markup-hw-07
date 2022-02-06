@@ -6,18 +6,14 @@
 }
 .address-item,
 .contact-link {
-  font-weight: 400;
+  @include font(14px, 400, 1.71, null);
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
 }
 .contact-link {
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1, 14px;
+  @include font(14px, 700, 1.14, null);
   text-transform: uppercase;
   color: var(--third-color);
   margin-bottom: 20px;
