@@ -3,7 +3,7 @@
   margin-bottom: 94px;
   background-color: var(--third-color);
 }
-.our-clients-title {
+.our-clients__title {
   color: var(--secondary-text-color);
   @include font(36px, 700, 1.17, null);
   text-align: center;
@@ -12,12 +12,12 @@
 .clients-list {
   display: flex;
 }
-.our-clients-item {
+.clients-list__item {
   & + & {
     margin-left: 30px;
   }
 }
-.our-clients-link {
+.clients-list__link {
   width: 170px;
   height: 92px;
   justify-content: center;
